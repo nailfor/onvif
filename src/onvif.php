@@ -46,7 +46,7 @@ class onvif extends \stdClass
     {
         $this->Device = new Device($location, $username, $password);
 
-        $capabilities = $this->device->GetCapabilities(null);
+        $capabilities = $this->Device->GetCapabilities(null);
 
         foreach(static::$caps as $name => $class) {
             if(isset($capabilities->$name)) {

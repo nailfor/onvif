@@ -3,7 +3,7 @@
     "description": "onvif protocol",
     "keywords": ["soap", "onvif", "camera"],
     "type": "library",
-    "license": "LGPL",
+    "license": "MIT",
     "authors": [
         {
             "name": "Rocky Cardwell",

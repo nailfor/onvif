@@ -17,9 +17,17 @@ class SoapClient extends \SoapClient
         $url = parse_url($uri);
         $scheme = $url['scheme'] ?? 'http';
         $host   = $url['host'] ?? '';
-        $path   = $url['path'] . $this->url;
-        $port   = $url['port'] ?? '80';
-        return "$scheme://$host:$port$path";
+        $path   = $url['path'] ?? '';
+        $port   = $url['port'] ?? '';
+        if (!$host) {
+            $host = $path;
+            $path = '';
+        }
+        if ($port) {
+            $host.=":$port";
+        }
+        
+        return "$scheme://$host$path".$this->url;
     }
     
     public function __construct($uri, $username, $password)
