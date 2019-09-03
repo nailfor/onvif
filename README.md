@@ -14,7 +14,7 @@ composer require nailfor/onvif
 ##Usage
 
 ```
-$cam = new nailfor\onvif\Onvif("http://camera.hostname:8000", "username", "password");
+$cam = new nailfor\onvif\onvif("http://camera.hostname:8000", "username", "password");
 
 //degree, degree, range[0,1]
 $cam->AbsoluteMove(170.0, 18.0, 0.2); 
