@@ -1,0 +1,25 @@
+{
+    "name": "nailfor/onvif",
+    "description": "onvif protocol",
+    "keywords": ["soap", "onvif", "camera"],
+    "type": "library",
+    "license": "LGPL",
+    "authors": [
+        {
+            "name": "Rocky Cardwell",
+            "email": "github@thecardwells.net"
+        },
+        {
+            "name": "Nailfor"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "nailfor\\onvif\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=7.1.0",
+        "ext-soap": ">=7.1.0"
+    }
+}
