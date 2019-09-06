@@ -103,9 +103,6 @@ class SoapClient extends \SoapClient
             $message = $e->getMessage();
             switch ($e->faultcode) {
                 case 's:Sender':
-                    $r = $this->__getLastRequest();
-                    dd($r);
-                    
                     throw new AuthorizeException($message, $e->faultcode);
                 default:
                     throw new SoapException($message, $e->faultcode);
